@@ -9,19 +9,19 @@ import { DemandeCommercialService } from 'src/app/controller/service/demande-com
 })
 export class DemandeCommercialCreateComponent {
 
-  
+
   constructor(private demandeCommercialService: DemandeCommercialService) { }
 
   public get demandeCommercial(): DemandeCommercial {
      return this.demandeCommercialService.demandeCommercial;
   }
   public save() {
-     this.demandeCommercialService.save();
+     this.demandeCommercialService.save(this.demandeCommercial);
   }
 
-  
- 
- 
-  
+
+
+
+
 
 }
