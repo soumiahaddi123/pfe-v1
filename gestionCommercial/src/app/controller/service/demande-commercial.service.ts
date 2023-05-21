@@ -17,16 +17,16 @@ export class DemandeCommercialService {
   }
 
   public findAll() : Observable<Array<DemandeCommercial>> {
-    return this.http.get(this.url);
+    return this.http.get<Array<DemandeCommercial>>(this.url);
   }
 
   public save(demandeCommercial: DemandeCommercial): Observable<number> {
-    return this.http.post(this.url, demandeCommercial);
+    return this.http.post<number>(this.url, demandeCommercial);
   }
 
 
   public findByRef(ref: string): Observable<DemandeCommercial> {
-    return this.http.get(this.url + "ref/" + ref)
+    return this.http.get<DemandeCommercial>(this.url + "ref/" + ref)
   }
 
   public get demandeCommercial(): DemandeCommercial {
