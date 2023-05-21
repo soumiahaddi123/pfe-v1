@@ -1,0 +1,26 @@
+<div class="card">
+    <div class="card-header"> Ajout demande commercial </div>
+    <div class="card-body">
+        <div class="form-group">
+            <label for=""> Cin commercial</label>
+            <input type="text" class="form-control" [(ngModel)]="demandeCommercial.cinCommercial">
+        </div>
+        <div class="form-group">
+            <label for=""> Ref offre</label>
+            <input type="text" class="form-control" [(ngModel)]="demandeCommercial.refOffre">
+        </div>
+        <div class="form-group">
+            <label> Montant</label>
+            <input type="number" class="form-control" [(ngModel)]="demandeCommercial.montant">
+        </div>
+        <div class="form-group">
+            <label for=""> Etat</label>
+            <input type="text" class="form-control" [(ngModel)]="demandeCommercial.etat">
+        </div>
+    </div>
+
+    <div class="card-footer">
+        <button (click)="save()" class="btn btn-primary"> Save </button>
+
+    </div>
+</div>

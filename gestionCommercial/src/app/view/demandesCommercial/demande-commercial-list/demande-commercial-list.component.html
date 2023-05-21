@@ -1,0 +1,25 @@
+<table class="table">
+
+<thead>
+    <th>Id</th>
+    <th> cinCommercial</th>
+    <th> refOffre</th>
+    <th>Montant</th>
+    <th>Etat</th>
+
+</thead>
+
+<tbody>
+    <tr *ngFor="let d of demandesCommercial">
+        <td>{{d.id}}</td>
+        <td>{{d.cinCommercial}}</td>
+        <td>{{d.refOffre}}</td>
+        <td>{{d.montant}}</td>
+        <td>{{d.etat}}</td>
+
+    </tr>
+</tbody>  
+
+
+</table>
+
