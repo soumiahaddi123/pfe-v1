@@ -10,6 +10,11 @@ import { DemandeCommercialViewComponent } from './view/demandesCommercial/demand
 import { DemandesCommercialComponent } from './demandes-commercial/demandes-commercial.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { CommandeCreateComponent } from './commandes/commande-create/commande-create.component';
+import { CommandeCreaeComponent } from './commandes/commande-creae/commande-creae.component';
+import { CommandeListComponent } from './commandes/commande-list/commande-list.component';
+import { CommandeViewComponent } from './commandes/commande-view/commande-view.component';
+import { CommandeEditComponent } from './commandes/commande-edit/commande-edit.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +23,12 @@ import { HttpClientModule } from '@angular/common/http';
     DemandeCommercialListComponent,
     DemandeCommercialEditComponent,
     DemandeCommercialViewComponent,
-    DemandesCommercialComponent
+    DemandesCommercialComponent,
+    CommandeCreateComponent,
+    CommandeCreaeComponent,
+    CommandeListComponent,
+    CommandeViewComponent,
+    CommandeEditComponent
   ],
   imports: [
     BrowserModule,
