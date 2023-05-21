@@ -13,7 +13,7 @@ export class DemandeCommercialService {
 
   constructor(private http: HttpClient) { }
   public findAll(){
-    return this.http.get("demandeCommercial")
+    return this.http.get("http://localhost:4200/api/v1/gestion-commercial")
   }
 
   public save(){
@@ -22,7 +22,7 @@ export class DemandeCommercialService {
 
 
   public findByRef(){
-    return this.http.get("refOffre")
+    return this.http.get("http://localhost:4200/api/v1/gestion-commercial/refoffre")
   }
 
   public get demandeCommercial(): DemandeCommercial {

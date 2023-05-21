@@ -8,6 +8,8 @@ import { DemandeCommercialListComponent } from './view/demandesCommercial/demand
 import { DemandeCommercialEditComponent } from './view/demandesCommercial/demande-commercial-edit/demande-commercial-edit.component';
 import { DemandeCommercialViewComponent } from './view/demandesCommercial/demande-commercial-view/demande-commercial-view.component';
 import { DemandesCommercialComponent } from './demandes-commercial/demandes-commercial.component';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { DemandesCommercialComponent } from './demandes-commercial/demandes-comm
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
