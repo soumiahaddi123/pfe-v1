@@ -22,11 +22,18 @@ export class DemandeCommercialService {
 
   public save(demandeCommercial: DemandeCommercial): Observable<number> {
     return this.http.post<number>(this.url, demandeCommercial);
+    
   }
 
 
   public findByRef(ref: string): Observable<DemandeCommercial> {
     return this.http.get<DemandeCommercial>(this.url + "ref/" + ref)
+  }
+
+  public update(index:number,demandeCommercial:DemandeCommercial){
+    
+    this.demandeCommercial=demandeCommercial;
+
   }
 
   public get demandeCommercial(): DemandeCommercial {

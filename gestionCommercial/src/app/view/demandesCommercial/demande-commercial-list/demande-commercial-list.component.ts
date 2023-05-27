@@ -13,5 +13,20 @@ export class DemandeCommercialListComponent {
   public get demandesCommercial(): Array<DemandeCommercial> {
     return this.demandeCommercialService.demandesCommercial;
   }
- 
+  public delete(index: number){
+
+    this.demandesCommercial.splice(index);
+
+  }
+  public update(index: number,demandeCommercial:DemandeCommercial){
+
+    this.demandeCommercialService.update(index,demandeCommercial);
+
+  }
+  
+ ngOnInit(): void {
+
+    this.demandeCommercialService.findAll();
+ }
+
 }
