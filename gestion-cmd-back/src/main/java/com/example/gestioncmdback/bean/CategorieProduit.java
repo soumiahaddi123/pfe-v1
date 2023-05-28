@@ -9,8 +9,7 @@ public class CategorieProduit {
     @Id @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
 
-    @OneToMany
-    private Set<Produit> produits;
+
     private String libelle;
 
     public long getId() {
@@ -19,14 +18,6 @@ public class CategorieProduit {
 
     public void setId(long id) {
         this.id = id;
-    }
-
-    public Set<Produit> getProduits() {
-        return produits;
-    }
-
-    public void setProduits(Set<Produit> produits) {
-        this.produits = produits;
     }
 
     public String getLibelle() {

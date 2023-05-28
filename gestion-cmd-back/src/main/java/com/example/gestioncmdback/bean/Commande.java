@@ -13,8 +13,9 @@ public class Commande {
     private double total;
     private double totalPaye;
 
-    @OneToMany(mappedBy = "Commande")
+    @OneToMany(mappedBy = "commande")
     private List<CommandeItem> commandeItems;
+
     public long getId() {
         return id;
     }

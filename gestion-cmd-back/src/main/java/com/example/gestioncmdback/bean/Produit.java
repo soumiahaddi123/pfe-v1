@@ -9,8 +9,7 @@ public class Produit {
 
     @Id @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
-    @OneToMany
-    private Set<CommandeItem> commandeItems;
+
 
     private String ref;
     private String libelle;
@@ -23,14 +22,6 @@ public class Produit {
 
     public void setId(long id) {
         this.id = id;
-    }
-
-    public Set<CommandeItem> getCommandeItems() {
-        return commandeItems;
-    }
-
-    public void setCommandeItems(Set<CommandeItem> commandeItems) {
-        this.commandeItems = commandeItems;
     }
 
     public String getRef() {

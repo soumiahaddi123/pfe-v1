@@ -14,7 +14,7 @@ public class CommandeItem {
     private Commande commande;
     @ManyToOne
     private Produit produit;
-    private double prix;
+    private BigDecimal prix;
     private BigDecimal quantité;
     public Long getId() {
         return id;
@@ -40,11 +40,11 @@ public class CommandeItem {
         this.produit = produit;
     }
 
-    public double getPrix() {
+    public BigDecimal getPrix() {
         return prix;
     }
 
-    public void setPrix(double prix) {
+    public void setPrix(BigDecimal prix) {
         this.prix = prix;
     }
 

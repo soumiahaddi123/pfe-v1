@@ -10,8 +10,30 @@ public class Reception {
     private  Long id;
     private String reference;
 
+    @ManyToOne
+    private Commande commande;
 
+    public Long getId() {
+        return id;
+    }
 
+    public void setId(Long id) {
+        this.id = id;
+    }
 
+    public String getReference() {
+        return reference;
+    }
 
+    public void setReference(String reference) {
+        this.reference = reference;
+    }
+
+    public Commande getCommande() {
+        return commande;
+    }
+
+    public void setCommande(Commande commande) {
+        this.commande = commande;
+    }
 }
