@@ -10,6 +10,8 @@ public class Reception {
     private  Long id;
     private String reference;
 
-    OneToMany
-   private  Commande commande;
+
+
+
+
 }
