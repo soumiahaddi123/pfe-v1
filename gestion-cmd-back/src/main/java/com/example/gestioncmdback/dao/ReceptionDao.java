@@ -11,4 +11,5 @@ public interface ReceptionDao extends JpaRepository<Reception, Long> {
     Reception findByReference(String reference);
     int deleteByReference(String reference);
 
+
 }

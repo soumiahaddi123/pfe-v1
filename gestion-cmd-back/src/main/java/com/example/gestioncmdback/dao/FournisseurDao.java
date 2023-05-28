@@ -10,7 +10,7 @@ import java.util.List;
 
 public interface FournisseurDao extends JpaRepository<Fournisseur,Long> {
 
-   Fournisseur findByNom(String nom);
+   List<Fournisseur> findByNom(String nom);
 
    int deleteByNom(String nom);
 

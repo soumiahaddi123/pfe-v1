@@ -11,9 +11,7 @@ import java.util.List;
 
 @Service
 public class FournisseurService {
-    public Fournisseur findByNom(String nom) {
-        return fournisseurDao.findByNom(nom);
-    }
+
 
     @Transactional
     public int deleteByNom(String nom) {
@@ -23,6 +21,10 @@ public class FournisseurService {
 
     public List<Fournisseur> findAll() {
         return fournisseurDao.findAll();
+    }
+
+    public List<Fournisseur> findByNom(String nom) {
+        return fournisseurDao.findByNom(nom);
     }
 
     @Autowired

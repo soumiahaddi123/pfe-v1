@@ -2,6 +2,8 @@ package com.example.gestioncmdback.bean;
 
 import jakarta.persistence.*;
 
+import java.util.List;
+
 @Entity
 public class Reception {
 
@@ -12,6 +14,17 @@ public class Reception {
 
     @ManyToOne
     private Commande commande;
+
+    public List<ReceptionItem> getReceptionItems() {
+        return receptionItems;
+    }
+
+    public void setReceptionItems(List<ReceptionItem> receptionItems) {
+        this.receptionItems = receptionItems;
+    }
+
+    @OneToMany(mappedBy = "reception")
+    private List<ReceptionItem> receptionItems;
 
     public Long getId() {
         return id;

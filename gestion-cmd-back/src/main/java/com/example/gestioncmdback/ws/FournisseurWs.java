@@ -11,13 +11,14 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @RestController
-@RequestMapping("api/fourisseur")
+@RequestMapping("api/v1/fourisseur")
 public class FournisseurWs {
 
     @GetMapping("/nom/{nom}")
-    public Fournisseur findByNom(String nom) {
+    public List<Fournisseur> findByNom(String nom) {
         return fournisseurService.findByNom(nom);
     }
+
     @DeleteMapping("/nom/{nom}")
     public int deleteByNom(String nom) {
         return fournisseurService.deleteByNom(nom);
@@ -26,6 +27,8 @@ public class FournisseurWs {
     public List<Fournisseur> findAll() {
         return fournisseurService.findAll();
     }
+
+
 
     @Autowired
     private FournisseurService fournisseurService;

@@ -5,12 +5,14 @@ import com.example.gestioncmdback.bean.ReceptionItem;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
+import java.util.List;
+
 @Repository
-public interface ReceptionItemDao extends JpaRepository<ReceptionItem,Long> {
+public interface ReceptionItemDao extends JpaRepository<ReceptionItem, Long> {
 
-    Reception findByReception(Reception reception);
+    List<ReceptionItem> findByReceptionReference(String reference);
 
-    int deleteByReception(Reception reception);
-
+    int deleteByReceptionReference(String reference);
 
 }
+
