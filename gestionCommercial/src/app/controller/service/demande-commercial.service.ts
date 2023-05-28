@@ -22,7 +22,7 @@ export class DemandeCommercialService {
 
   public save(demandeCommercial: DemandeCommercial): Observable<number> {
     return this.http.post<number>(this.url, demandeCommercial);
-    
+
   }
 
 
@@ -31,7 +31,7 @@ export class DemandeCommercialService {
   }
 
   public update(index:number,demandeCommercial:DemandeCommercial){
-    
+
     this.demandeCommercial=demandeCommercial;
 
   }
