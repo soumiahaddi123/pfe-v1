@@ -27,6 +27,9 @@ public class FournisseurService {
         return fournisseurDao.findByNom(nom);
     }
 
+    public Fournisseur save(Fournisseur fournisseur){
+        return fournisseurDao.save(fournisseur);
+    }
     @Autowired
     private FournisseurDao fournisseurDao;
 

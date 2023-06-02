@@ -25,8 +25,11 @@ public class ReceptionItemWs {
         return receptionService.findAll();
     }
 
+    @PostMapping("/")
+    public int save(Reception reception) {
+        return receptionService.save(reception);
+    }
+
     @Autowired
     private ReceptionService receptionService;
-
-
 }

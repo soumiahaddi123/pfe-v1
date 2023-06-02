@@ -26,6 +26,11 @@ public class MagasinWs {
         return magasinService.findAll();
     }
 
+    @PostMapping("/")
+    public Magasin save(Magasin magasin) {
+        return magasinService.save(magasin);
+    }
+
     @Autowired
     private MagasinService magasinService;
 }

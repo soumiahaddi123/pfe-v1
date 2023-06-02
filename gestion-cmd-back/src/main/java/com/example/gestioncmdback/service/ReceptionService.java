@@ -24,6 +24,19 @@ public class ReceptionService {
         return receptionDao.findAll();
     }
 
+    public int save(Reception reception){
+        if(findByReference(reception.getReference())!=null){
+            return -1;
+        }else {
+            receptionDao.save(reception);
+            
+            return 1;
+        }
+    }
+
     @Autowired
     private ReceptionDao receptionDao;
+
+    @Autowired
+    private ReceptionItemService receptionItemService;
 }

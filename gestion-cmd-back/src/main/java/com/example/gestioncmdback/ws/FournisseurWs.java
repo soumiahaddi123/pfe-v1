@@ -3,10 +3,7 @@ package com.example.gestioncmdback.ws;
 import com.example.gestioncmdback.bean.Fournisseur;
 import com.example.gestioncmdback.service.FournisseurService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.DeleteMapping;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -28,7 +25,10 @@ public class FournisseurWs {
         return fournisseurService.findAll();
     }
 
-
+    @PostMapping("/")
+    public Fournisseur save(Fournisseur fournisseur) {
+        return fournisseurService.save(fournisseur);
+    }
 
     @Autowired
     private FournisseurService fournisseurService;

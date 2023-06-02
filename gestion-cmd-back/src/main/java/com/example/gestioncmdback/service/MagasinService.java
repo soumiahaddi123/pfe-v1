@@ -23,6 +23,11 @@ public class MagasinService {
         return magasinDao.findAll();
     }
 
+    public Magasin save(Magasin magasin){
+
+        return magasinDao.save(magasin);
+    }
+
     @Autowired
     private MagasinDao magasinDao;
 }

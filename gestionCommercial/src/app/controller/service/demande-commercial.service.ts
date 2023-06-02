@@ -3,6 +3,7 @@ import {DemandeCommercial} from '../model/demande-commercial.model';
 import {HttpClient} from '@angular/common/http';
 import {Observable} from "rxjs";
 
+// @ts-ignore
 @Injectable({
   providedIn: 'root'
 })

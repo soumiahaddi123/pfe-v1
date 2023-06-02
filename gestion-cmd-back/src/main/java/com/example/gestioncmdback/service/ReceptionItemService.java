@@ -23,6 +23,13 @@ public class ReceptionItemService {
         return receptionItemDao.findAll();
     }
 
+
+    public int save(ReceptionItem receptionItem){
+
+         receptionItemDao.save(receptionItem);
+        return 1;
+    }
+
     @Autowired
     private ReceptionItemDao receptionItemDao;
 }
